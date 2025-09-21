@@ -1,0 +1,10 @@
+This is a test file for uploading to check if the file upload functionality is working properly.
+
+EMPLOYMENT CONTRACT TEST
+
+Employee: John Doe
+Company: Test Corp
+Salary: $5000/month
+Start Date: January 1, 2024
+
+This is a simple test contract to verify that file upload and text extraction is working correctly.

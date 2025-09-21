@@ -1,0 +1,120 @@
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Globe, Scale } from "lucide-react";
+import FloatingChatbot from "@/components/FloatingChatbot";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { useAuth } from "@/hooks/useAuth";
+
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+const Layout = ({ children }: LayoutProps) => {
+  const { language, setLanguage, t } = useLanguage();
+  const { user, signOut } = useAuth();
+  
+  const toggleLanguage = () => {
+    setLanguage(language === 'en' ? 'hi' : 'en');
+  };
+
+  return (
+    <div className="min-h-screen bg-background">
+      {/* Header */}
+      <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
+        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+          <Link to="/" className="flex items-center space-x-3">
+            <div className="w-10 h-10 gradient-primary rounded-lg flex items-center justify-center">
+              <Scale className="w-6 h-6 text-primary-foreground" />
+            </div>
+            <div>
+              <h1 className="font-display text-xl font-bold text-foreground">{t('landing.title')}</h1>
+              <p className="text-xs text-muted-foreground">{t('landing.subtitle')}</p>
+            </div>
+          </Link>
+          
+          <div className="flex items-center space-x-4">
+            <nav className="hidden md:flex items-center space-x-6">
+              <Link to="/" className="text-foreground hover:text-primary transition-smooth">
+                {t('nav.home')}
+              </Link>
+            </nav>
+            
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={toggleLanguage}
+              className="flex items-center space-x-2"
+            >
+              <Globe className="w-4 h-4" />
+              <span>{language === 'en' ? 'हिन्दी' : 'English'}</span>
+            </Button>
+          </div>
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <main>{children}</main>
+
+      {/* Footer */}
+      <footer className="border-t border-border bg-card/30 mt-auto">
+        <div className="container mx-auto px-4 py-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <div className="flex items-center space-x-3 mb-4">
+                <div className="w-8 h-8 gradient-primary rounded-lg flex items-center justify-center">
+                  <Scale className="w-5 h-5 text-primary-foreground" />
+                </div>
+                <div>
+                  <h3 className="font-display font-semibold text-foreground">{t.title}</h3>
+                  <p className="text-xs text-muted-foreground">{t.subtitle}</p>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                {language === 'en' 
+                  ? "Empowering individuals with AI-powered legal insights."
+                  : "एआई-संचालित कानूनी अंतर्दृष्टि के साथ व्यक्तियों को सशक्त बनाना।"
+                }
+              </p>
+            </div>
+            
+            <div>
+              <h4 className="font-semibold text-foreground mb-4">
+                {language === 'en' ? 'Legal' : 'कानूनी'}
+              </h4>
+              <div className="space-y-2">
+                <a href="#" className="block text-sm text-muted-foreground hover:text-primary transition-smooth">
+                  {t.privacy}
+                </a>
+                <a href="#" className="block text-sm text-muted-foreground hover:text-primary transition-smooth">
+                  {t.terms}
+                </a>
+              </div>
+            </div>
+            
+            <div>
+              <h4 className="font-semibold text-foreground mb-4">
+                {language === 'en' ? 'Support' : 'सहायता'}
+              </h4>
+              <div className="space-y-2">
+                <a href="mailto:support@nyaydarpan.com" className="block text-sm text-muted-foreground hover:text-primary transition-smooth">
+                  support@nyaydarpan.com
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div className="border-t border-border mt-8 pt-8 text-center">
+            <p className="text-sm text-muted-foreground">
+              © 2024 NyayDarpan. {language === 'en' ? 'All rights reserved.' : 'सभी अधिकार सुरक्षित।'}
+            </p>
+          </div>
+        </div>
+      </footer>
+      
+      {/* Floating Chatbot */}
+      <FloatingChatbot />
+    </div>
+  );
+};
+
+export default Layout;

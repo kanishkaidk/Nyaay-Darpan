@@ -1,0 +1,29 @@
+# NyayDarpan Backend Environment Variables
+# Copy this file to .env and fill in your actual API keys
+
+# Gemini API Configuration
+GEMINI_API_KEY=your_gemini_api_key_here
+
+# OpenAI API Configuration (for Whisper)
+OPENAI_API_KEY=your_openai_api_key_here
+
+# Flask Configuration
+FLASK_DEBUG=True
+PORT=5000
+
+# Database Configuration (for future RAG implementation)
+MONGODB_URI=mongodb://localhost:27017/nyaydarpan
+
+# Indian Kanoon Configuration
+KANOON_BASE_URL=https://indiankanoon.org
+
+# Security Configuration
+SECRET_KEY=your_secret_key_here
+
+# File Upload Configuration
+MAX_CONTENT_LENGTH=268435456  # 256MB in bytes
+UPLOAD_FOLDER=uploads/
+
+# Logging Configuration
+LOG_LEVEL=INFO
+LOG_FILE=nyaydarpan.log

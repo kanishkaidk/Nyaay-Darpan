@@ -1,0 +1,25 @@
+EMPLOYMENT CONTRACT
+
+This Employment Agreement is entered into between John Doe (Employee) and TechCorp India Private Limited (Company) on January 1, 2024.
+
+TERMS AND CONDITIONS:
+
+1. POSITION AND DUTIES
+Employee shall serve as Software Engineer and perform duties as assigned by the Company.
+
+2. COMPENSATION
+Employee shall receive a monthly salary of ₹75,000 payable on the last working day of each month.
+
+3. WORKING HOURS
+Employee shall work 8 hours per day, 5 days a week. Overtime compensation is not provided.
+
+4. TERMINATION
+Either party may terminate this agreement with 30 days written notice. Company may terminate immediately for misconduct.
+
+5. CONFIDENTIALITY
+Employee shall maintain confidentiality of all company information.
+
+6. INTELLECTUAL PROPERTY
+All work created by Employee belongs to the Company.
+
+This agreement shall be governed by Indian laws.
