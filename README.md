@@ -2,9 +2,9 @@
 
 AI-native legal co-pilot that reviews contracts end to end, flags risks, and delivers actionable guidance before you sign.
 
-<video src="https://raw.githubusercontent.com/kanishkaidk/Nyaay-Darpan/main/output/WhatsApp%20Video%202025-09-21%20at%2017.29.37_18e107f2.mp4" controls width="100%" preload="metadata">
-  Your browser does not support the video tag. Download the <a href="https://raw.githubusercontent.com/kanishkaidk/Nyaay-Darpan/main/output/WhatsApp%20Video%202025-09-21%20at%2017.29.37_18e107f2.mp4">demo recording</a>.
-</video>
+[![Watch the demo on YouTube](https://img.youtube.com/vi/mcDRSo5_cbA/maxresdefault.jpg)](https://youtu.be/mcDRSo5_cbA)
+
+> GitHub READMEs sanitize inline iframes, so the thumbnail above links directly to the hosted demo video.
 
 ## Overview
 
