@@ -1,168 +1,125 @@
-# NyayDarpan 🏛️
+# Nyaay-Darpan
 
-**AI-Powered Contract Analysis Platform**
+AI-native legal co-pilot that reviews contracts end to end, flags risks, and delivers actionable guidance before you sign.
 
-> Sign your contracts without fear. AI-powered legal shield that reveals hidden risks and checks counterparty history.
+## Overview
 
-[![Built with React](https://img.shields.io/badge/Built%20with-React-61dafb.svg)](https://reactjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-007acc.svg)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-38b2ac.svg)](https://tailwindcss.com/)
+- Frontend: Vite + React for multilingual, responsive workflows.
+- Backend: Flask API layer powering analysis, RAG retrieval, and automation.
+- AI stack: Google Gemini, OpenAI Whisper, FAISS/Pinecone for knowledge-grounded responses.
+- Hosted on Vercel (frontend) and Render (backend) with Supabase for auth and persistence.
 
----
+## Key Differentiators
 
-## ✨ Features
+- Full contract scan with clause-level obligations, risk labels, and recommended next steps.
+- Legal compliance score with prioritized remediation checklist and red-flag alerts.
+- Behavioral karma check on counterparties using precedent data and public records.
+- People’s Ledger surfacing community experience for better negotiation leverage.
+- Time, cost, and clarity advantage by distilling legalese into plain-language actions.
 
-- 🤖 **AI X-Ray Scan** - Deep analysis of contracts to identify unfair clauses and hidden risks
-- 🔍 **Karma Check** - Evaluates fairness of contract terms and rates clause balance
-- 👥 **People's Ledger** - Community-driven database for company contract practices
-- 🛡️ **Secure & Private** - Bank-level encryption with automatic document deletion
-- 🌍 **Multilingual Support** - Analysis available in multiple Indian languages
-- 💬 **NyayBot Assistant** - Interactive AI chatbot for legal guidance
-- 📱 **Mobile Friendly** - Responsive design for all devices
+## Feature Highlights
 
----
+- Secure contract upload or text paste, instant AI-generated reports.
+- Multilingual UX with conversational NyayBot assistant and voice-to-text intake.
+- RAG-driven clause retrieval ensuring explainable, cited answers.
+- Role-based access with Supabase auth and protected routes.
+- Visual dashboards for compliance scoring, risk heatmaps, and obligation summaries.
 
-## 🚀 Quick Start
-
-### Prerequisites
-
-- Node.js 18+ and npm installed ([install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating))
-- Git
-
-### Installation
+## Quick Start
 
 ```bash
-# Clone the repository
 git clone <YOUR_GIT_URL>
+cd Nyaay-Darpan
 
-# Navigate to project directory
-cd nyaydarpan
-
-# Install dependencies
+# Frontend
+cd frontend
 npm install
-
-# Start development server
 npm run dev
+
+# Backend (new terminal)
+cd ../backend
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+python app.py
 ```
 
-The application will be available at `http://localhost:5173`
+Open the frontend at `http://localhost:5173` and configure backend API URL in `frontend/.env`.
 
----
+## Usage Flow
 
-## 🛠️ Tech Stack
+1. Sign in via Supabase auth and create a workspace.
+2. Upload a contract PDF or paste clauses; optional voice input leverages Whisper.
+3. Review the AI report: clause-level insights, compliance score, karma check, and ledger notes.
+4. Export recommendations or share secure links for team review.
 
-- **Frontend Framework:** React 18 with TypeScript
-- **Build Tool:** Vite
-- **Styling:** Tailwind CSS + shadcn/ui components
-- **State Management:** React Query (TanStack Query)
-- **Routing:** React Router
-- **Form Handling:** React Hook Form
-- **Icons:** Lucide React
-
----
-
-## 📁 Project Structure
+## Repository Structure
 
 ```
-src/
-├── components/          # Reusable UI components
-│   ├── ChatInterface.tsx
-│   ├── Layout.tsx
-│   ├── NyayBot.tsx     # AI Assistant chatbot
-│   └── ui/             # shadcn/ui components
-├── hooks/              # Custom React hooks
-├── pages/              # Route components
-├── lib/                # Utilities and helpers
-└── integrations/       # Third-party integrations
+backend/
+│── app.py                 # Flask API entrypoint
+│── services/              # Gemini, Whisper, OCR, RAG helpers
+│── scripts/               # Data ingestion and scraping tools
+│── requirements.txt       # Python dependencies
+frontend/
+│── src/                   # React application logic
+│   ├── pages/             # Input, report, chat, auth routes
+│   ├── components/        # UI kit, chat interface, layouts
+│   ├── integrations/      # Supabase clients and types
+│   └── hooks/             # Auth, toasts, device detection
+output/
+│── Screenshot 2025-11-10 220514.png  # System architecture reference
+│── WhatsApp Image 2025-09-21 at 22.46.53_41d88ca8.jpg  # Product visual
+│── WhatsApp Video 2025-09-21 at 17.29.37_18e107f2.mp4  # Demo recording
 ```
 
----
+## Tech Stack
 
-## 🤖 NyayBot Features
+- React 18, TypeScript, Vite, shadcn/ui, Tailwind CSS.
+- Flask, Python, Supabase, Embeddings + RAG (FAISS or Pinecone).
+- Google Gemini for legal reasoning, OpenAI Whisper for speech intake.
+- Vercel (frontend), Render (backend), GitHub Actions for CI/CD.
 
-The integrated NyayBot AI assistant helps users with:
+## Architecture
 
-- Contract analysis guidance
-- Security and privacy information
-- Feature explanations (Karma Check, People's Ledger)
-- Troubleshooting support
-- Quick question responses
+![System Architecture](output/Screenshot%202025-11-10%20220514.png)
 
----
+![Product Snapshot](output/WhatsApp%20Image%202025-09-21%20at%2022.46.53_41d88ca8.jpg)
 
-## 🎨 Styling & Theming
+<video src="output/WhatsApp%20Video%202025-09-21%20at%2017.29.37_18e107f2.mp4" controls width="100%" preload="metadata">
+  Your browser does not support the video tag.
+</video>
 
-The app uses a custom design system built on Tailwind CSS with:
+## Importance
 
-- **Custom CSS Variables** - Defined in index.css
-- **Gradient Utilities** - Primary, secondary, hero, and card gradients
-- **Animation Classes** - Pulse glow, float, and scan animations
-- **Typography** - Inter and Playfair Display fonts
+- Reduces contract review cycles from hours to minutes with AI-backed confidence.
+- De-risks deals by exposing counterparty behavior before commitments.
+- Democratizes legal literacy for SMBs and individuals with plain-language insights.
+- Supports compliance teams with auditable, explainable recommendations.
 
----
+## Environment Variables
 
-## 🔒 Security Features
+Create environment files from templates and populate API keys:
 
-- End-to-end document encryption
-- Automatic file deletion after analysis
-- No permanent storage of sensitive documents
-- GDPR compliant data handling
-- Secure user authentication
-
----
-
-## 🌟 Key Components
-
-- **Layout** - Main application wrapper
-- **NyayBot** - Interactive AI assistant
-- **ChatInterface** - Real-time chat functionality
-- **ProtectedRoute** - Authentication guard
-
----
-
-## 📝 Environment Setup
-
-Create a `.env` file in the root directory:
-
-```env
-# Add your environment variables here
-VITE_API_URL=your_api_url
-VITE_APP_NAME=NyayDarpan
+```
+cp frontend/env.template frontend/.env
+cp backend/env_template.txt backend/.env
 ```
 
----
+Set Gemini, Whisper, Supabase, and Pinecone credentials before running services.
 
-## 🚀 Deployment
+## Deployment Notes
 
-### Build for Production
+- Frontend: `npm run build` followed by Vercel deployment.
+- Backend: Containerize Flask app or use Render Blueprint; ensure background workers for long-running scans.
+- Configure Supabase policies for secure document access and history.
 
-```bash
-npm run build
-# Deploy the `dist` folder to your hosting platform
-```
+## Roadmap
 
----
+- Deeper compliance playbooks by sector.
+- Advanced negotiation assistant with clause rewrite suggestions.
+- Expanded ledger analytics with crowdsourced contract outcomes.
 
-## 📧 Support
-- **NyayBot:** Use the in-app AI assistant for instant help
-- **Documentation:** Built-in help system within the application
+## License
 
----
-
-## 📄 License
-
-This project is proprietary software. All rights reserved.
-
----
-
-## 💡 About
-
-**Made with ❤️ for the Indian legal community**
-
-*Empowering citizens with AI-driven legal insights to make informed decisions.*
-
----
-
-### 🚀 Get Started Today!
-
-Transform how you analyze contracts with the power of AI. Join thousands of users who trust NyayDarpan for their legal document analysis needs.
+Proprietary. All rights reserved.
