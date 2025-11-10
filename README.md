@@ -75,10 +75,16 @@ output/
 
 ## Tech Stack
 
-- React 18, TypeScript, Vite, shadcn/ui, Tailwind CSS.
-- Flask, Python, Supabase, Embeddings + RAG (FAISS or Pinecone).
-- Google Gemini for legal reasoning, OpenAI Whisper for speech intake.
-- Vercel (frontend), Render (backend), GitHub Actions for CI/CD.
+- React 18 + TypeScript: strongly typed component model for predictable, multilingual UI workflows.
+- Vite build tool: fast HMR and bundling for rapid iteration across contract review flows.
+- Tailwind CSS with shadcn/ui: reusable legal dashboards and accessible form components.
+- Flask (Python): lightweight API layer orchestrating OCR, embeddings, scoring, and report assembly.
+- Supabase (PostgreSQL + Auth): secure tenant data storage, row-level policies, and magic link authentication.
+- Google Gemini API: advanced contract reasoning, clause interpretation, and recommendation synthesis.
+- OpenAI Whisper API: speech-to-text capture for voice-based contract intake in Indian languages.
+- Retrieval layer (FAISS or Pinecone): vector search powering clause context retrieval and legal precedent grounding.
+- Indian Kanoon case corpus: reference dataset for behavioral karma analysis and ledger summaries.
+- Hosting: Vercel serves the React frontend; Render runs the Flask services with background workers; GitHub Actions handles CI/CD.
 
 ## Architecture
 
