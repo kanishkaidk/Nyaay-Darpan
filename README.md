@@ -2,9 +2,7 @@
 
 AI-native legal co-pilot that reviews contracts end to end, flags risks, and delivers actionable guidance before you sign.
 
-[![Watch the demo on YouTube](https://img.youtube.com/vi/mcDRSo5_cbA/maxresdefault.jpg)](https://youtu.be/mcDRSo5_cbA)
-
-> GitHub READMEs sanitize inline iframes, so the thumbnail above links directly to the hosted demo video.
+[![Watch the demo on YouTube](output/image.png)](https://youtu.be/mcDRSo5_cbA)
 
 ## Overview
 
