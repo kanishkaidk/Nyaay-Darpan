@@ -2,6 +2,10 @@
 
 AI-native legal co-pilot that reviews contracts end to end, flags risks, and delivers actionable guidance before you sign.
 
+<video src="https://raw.githubusercontent.com/kanishkaidk/Nyaay-Darpan/main/output/WhatsApp%20Video%202025-09-21%20at%2017.29.37_18e107f2.mp4" controls width="100%" preload="metadata">
+  Your browser does not support the video tag. Download the <a href="https://raw.githubusercontent.com/kanishkaidk/Nyaay-Darpan/main/output/WhatsApp%20Video%202025-09-21%20at%2017.29.37_18e107f2.mp4">demo recording</a>.
+</video>
+
 ## Overview
 
 - Frontend: Vite + React for multilingual, responsive workflows.
@@ -91,10 +95,6 @@ output/
 ![System Architecture](output/Screenshot%202025-11-10%20220514.png)
 
 ![Product Snapshot](output/WhatsApp%20Image%202025-09-21%20at%2022.46.53_41d88ca8.jpg)
-
-<video src="output/WhatsApp%20Video%202025-09-21%20at%2017.29.37_18e107f2.mp4" controls width="100%" preload="metadata">
-  Your browser does not support the video tag.
-</video>
 
 ## Importance
 
